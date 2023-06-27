@@ -1,3 +1,4 @@
+import { CounterService } from 'src/app/services/counter/counter.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-state-management';
+
+
+constructor(private CounterService:CounterService){
+
+
+
+}
+
+increment(){
+
+this.CounterService.increment()
+
+}
+
+decrement(){
+
+  this.CounterService.decrement()
+  
+  }
+
 }
